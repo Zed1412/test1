@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+div.fixed {
+    position:fixed;
+    width:170px;
+    height:80px;
+    background-color:#D94A38;
+	margin:20px;
+	padding-top:20px;
+	color:#ffffff;
+	font-weight:bold;
+	float:left;
+	text-align:center;
+	left:500px;
+    top:300px;
+}
+</style>
+</head>
+<body>
+<p> Way 1</p>
+<br><br>
+<div style="background-color:#D94A38;width:170px;height:80px;margin:20px;padding-top:20px;color:#ffffff;font-weight:bold;font-size:18px;float:left;text-align:center;" onclick="clickMeEvent(this)">Click Me Now And you will get a suprise</div>
+</div>
+<script type="application/javascript">
+function clickMeEvent(obj) {
+  if (obj.innerHTML == "Click Me Now And you will get a suprise") {
+    obj.innerHTML = "3";
+    return;
+  }
+  if (obj.innerHTML == "3") {
+    obj.innerHTML = "2";  
+    return; 
+  }
+  if (obj.innerHTML == "2") {
+  obj.innerHTML = "1";  
+    return; 
+  }
+  if (obj.innerHTML == "1") {
+    obj.innerHTML = "BOO!!";
+    return;
+  }
+  if (obj.innerHTML == "BOO!!") {
+    obj.innerHTML = "HeHeh";
+    return;
+  }
+  if (obj.innerHTML == "HeHeh") {
+    obj.innerHTML = "You have been trolled";
+    return;
+  }
+}
+</script>
+<br>
+<button onclick="myFunction();myFunction1()" style="padding:30px 30px">another suprise</button><br>
+<script>
+function myFunction() {
+    var x = document.createElement("IMG");
+    x.setAttribute("src", "1501255090952.gif");
+    x.setAttribute("width", "304");
+    x.setAttribute("height", "228");
+    x.setAttribute("alt", "The Pulpit Rock");
+    document.body.appendChild(x);
+}
+</script>
+<br><br>
+<p>Way 2</p>
+<br><br>
+<div id="TML" onmouseover="myFunctionb(this);myFunctiona(this)" style="background-color:#D94A38;width:170px;height:80px;margin:20px;padding-top:20px;color:#ffffff;font-weight:bold;font-size:18px;float:left;text-align:center;" onclick="clickMeEvent(this)">Try to get me!!</div>
+<br><br>
+</div>
+
+
+<script>
+function myFunctionc(x) {
+     var x = document.getElementById('TML');
+     x.style.display = 'block';
+}
+
+function myFunctionb(x) {
+     var x = document.getElementById('TML');
+     x.style.display = 'none';
+}
+</script>
+<script>
+function myFunctiona(x) {
+     var x = document.getElementById('SML');
+     x.style.display = 'block';
+}
+
+function myFunctiond(x) {
+     var x = document.getElementById('SML');
+     x.style.display = 'none';
+}
+</script>
+<br><br>
+<br><br><br><p>Way 3</p>
+<p>Something is invisible, hold LMouse below to read it</p>
+<p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()" style="color:white;font-size:30px">You are FOOL!!</p>
+<script>
+function mouseDown() {
+    document.getElementById("myP").style.color = "red";
+}
+
+function mouseUp() {
+    document.getElementById("myP").style.color = "white";
+}
+</script>
+<div id="SML" class="fixed" style="display:none" onmouseover="myFunctiond(this);myFunctionc(this)" style="background-color:#D94A38;width:170px;height:80px;margin:20px;padding-top:20px;color:#ffffff;font-weight:bold;font-size:18px;float:left;text-align:center;" onclick="clickMeEvent(this)">Good try!!</div>
